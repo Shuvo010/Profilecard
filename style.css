@@ -1,0 +1,251 @@
+/* .....google font...... */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Germania+One&family=Irish+Grover&family=Libre+Baskerville:ital@0;1&family=Marck+Script&family=Moirai+One&family=Neuton:ital@1&family=Oleo+Script&family=Pacifico&family=Satisfy&family=Tangerine:wght@700&display=swap');
+*{
+    font-family: 'Germania One','cursive';
+    padding: 0%;
+    margin: 0%;
+    box-sizing:border-box; 
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#bea12e,rgb(13, 201, 244));
+
+}
+.card {
+    position: relative;
+    height: 200px; 
+    width: 430px;
+    background: #f9f4df ; 
+    border: #f00a0e 1px solid;
+    border-radius: 28px;
+    box-shadow: 5px 25px 40px 10px #594974bd;   
+    transition: 0.9s;
+}
+.card:hover{
+    height:530px;
+}
+.imgbx{
+    position: absolute;
+    left: 50%;
+    top: -35%;
+    transform: translateX(-50%);
+    border: 1px solid  #f00a0e;
+    border-radius: 20px;
+    height: 160px;
+    width: 160px;
+    box-shadow: 15px 15px 80px #e6008a96;
+    overflow: hidden;
+    transition:  0.5s;
+}
+.card:hover .imgbx {
+    width : 230px;
+    height: 230px;
+}
+.imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.card .content
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:  flex-end;
+    overflow: hidden;
+}
+.card .content .details
+{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    transition: 1s;
+    transform: translateY(360px);
+}
+.card:hover .content .details 
+{
+    transform: translateY(0.5px);
+}
+.arow{
+     position: absolute;
+     top: 20%;
+     left: 95%;
+     transform: translate(-50px -50px);
+    
+}
+.arow span{
+    display:block;
+    width: 20px;
+    height:20px;
+    margin: -40px;
+    border-bottom: 5px solid#f9004d;
+    border-right: 5px solid#f9004d;
+    transform: rotate(45deg);
+    animation:scroll 2s  infinite;        
+}
+.arow span:nth-child(2){
+    animation-delay: -.2s;
+}
+.arow span:nth-child(3)
+{
+    animation-delay: -.4s;
+}
+@keyframes  scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+        
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: rotate(45deg) translate(20px,20px);
+
+        }
+}
+.card .content .details h1 .name
+{
+    font-size: 50px;
+    color:#000 ;
+    font-family:'Pacifico';
+}
+ 
+.card .content .details h1 .title {
+    font-family:'Satisfy';
+    color: #f9004d;
+}
+.card .content .details h1 {
+    color: #f9004d;
+
+}
+.card .content .details h2 {
+    color: #f9004d;
+    font-size: 1.2em;
+    font-family:'Pacifico';
+    padding-bottom: 20px;
+}
+.tnx{
+    font-family :'Pacifico';
+}
+.bio 
+{
+    padding-bottom: 20px;
+}
+.card .content .details .text-ani{
+    position: relative;
+}
+.card .content .details .text-ani::after{
+        content: "|";
+        position: absolute;
+        right: 0;
+        color:  #f9f4df;
+        background-color: #f9f4df;
+        width: 100%;
+        animation: typing 3s steps(31) alternate infinite,
+                    line 3s infinite;
+    }
+    @keyframes typing {
+        to{
+            width: 0%;
+
+        }
+    }
+    @keyframes line {
+        50%{
+            color: transparent;
+        }
+        
+    }
+
+.card .content .details .data
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-left: 15px;
+}
+.card .content .details .data h3
+{
+    font-size: 1em;
+    color: #f9004d;
+    font-weight: 600px;
+
+}.card .content .details .data h3 span{
+    font-size: 1em;
+    color: #f9004d;
+    font-weight: 600px;
+    opacity: 0.9;
+}
+.card .content .details .btn 
+
+{
+    display: flex;
+    justify-content: space-around;
+ 
+
+}
+.card .content .details .btn button {
+ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #f9004d;
+    border: 2px solid  #998 ;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: 30px 30px;
+    box-shadow: 5px 5px 15px #f9004d;
+    outline:none;
+    background:rgb(238, 231, 211);
+    
+    opacity:0.1em;
+}
+.card .content .details .btn button:nth-child(2) 
+{
+    border: solid #999;
+    color: #fff;
+    background-color:#999 ;
+     
+}
+.card .content .details .link-icon 
+{
+    display: flex;
+    justify-content:space-around ;
+    margin :10%;    
+}
+.l-i1{
+    box-shadow: 5px 5px 10px #f9004d;
+    border-radius: 10px;
+}
+.l-i2{
+    box-shadow: 5px 5px 10px #f9004d;
+    border-radius: 10px;
+}
+.l-i3{
+    box-shadow: 5px 5px 10px #f9004d;
+    border-radius: 10px;
+}
+.card .content .details .link-icon:hover{
+    color:  #c408abd3;
+}  
+.card .content .details .link-icon h3 span 
+{
+    justify-content: space-around;
+    opacity: 0.9;
+}
+.card .content .details .link-icon h3 span:hover 
+{   
+    color:#f9004d;
+    transform: 1em;
+}
